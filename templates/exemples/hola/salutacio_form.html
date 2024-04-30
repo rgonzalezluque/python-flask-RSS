@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de formulari</title>
+</head>
+<body>
+    <form method="GET" action="/hola2">
+        <label>Salutacio: <input name="salutacio" type="text" /></label>
+        <br />
+        <label>Quantes: <input name="quantes" type="number" /></label>
+        <br />
+        <!-- <label>Tria el color: <select name="color-de-fons">
+            <option value="red">Vermell</option>
+            <option value="green">Verd</option>
+            <option value="blue">Blau</option>
+            <option value="yellow">Groc</option>
+        </select>
+        </label> -->
+        <label>Tria el color: <input type="color" name="color-de-fons"></label>
+        <br />
+        <label>Vols un gatet? <input type="checkbox" value="true" name="gatete" /></label>
+        <br />
+        <input type="submit" value="Enviar!" />
+    </form>
+</body>
+</html>
+
+

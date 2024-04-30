@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Vanguardia - {{rss.feed.title}}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+    {% for item in rss.entries %}
+        <p>
+            <a href="{{item.link}}">{{item.title}}</a>
+            {% for media in item.media_content %}
+                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+            {% endfor %}
+        </p>
+    {% endfor %}
+</body>
+</html>

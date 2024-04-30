@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: {{color_de_fons}};
+        }
+    </style>
+</head>
+<body>
+    <p>Variables que rebo:
+        <ul>
+            <li>salutacio = {{salutacio}}</li>
+            <li>quantes = {{quantes}}</li>
+            <li>color_de_fons = {{color_de_fons}}</li>
+            <li>gatete = {{gatete}}</li>
+
+        </ul>
+    </p>
+
+    {% for i in range(quantes) %}
+    Salutació: {{salutacio}}
+    <br />
+    {% endfor %}
+    {% if (gatete) %}
+        <p><img src="/static/img/gat.jpg" alt="Un gat" /></p>
+    {% endif %}
+    <a href="/hola1">Torna al formulari</a>
+</body>
+</html>

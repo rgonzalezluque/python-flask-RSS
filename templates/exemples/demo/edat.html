@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edat</title>
+</head>
+<body>
+    <h1>Pàgina de {{nom}}</h1>
+    {% if (edat >= 18) %}
+        <h3>{{nom}} és major d'edat</h3>
+    {% else %}
+        <h3>{{nom}} és menor d'edat</h3>
+    {% endif %}
+
+    {% for i in range(edat) %}
+        <p>No té {{i}} anys</p>
+    {% endfor %}
+    
+    <p>Té {{edat}} anys!!!</p>
+
+</body>
+</html>
