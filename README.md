@@ -10,7 +10,7 @@ python -m venv .venv
 ```
 * Si la comanda funciona bé el prompt s'hauria de veure així:
 
-![Captura de pantalla 2024-04-13 174730](https://github.com/rgonzalezluque/python-flask/assets/165800646/8c4e4a56-878f-4b69-94c0-3557a08e19fa)
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/1b66b4cc-bd01-4554-a466-ba075d9940f0)
 
 3. Ara ja podrem instalar els paquets que necessitem amb pip:
 ```powershell
