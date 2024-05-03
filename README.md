@@ -24,7 +24,7 @@ flask run --debug
 ```
 * I aquest serà el resultat final:
 
-![Captura de pantalla 2024-04-13 175408](https://github.com/rgonzalezluque/python-flask/assets/165800646/fb538292-8bc1-481c-96f6-908ab3ae4318)
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/25fa7473-6489-49f6-8987-77ebbe5127ef)
 
 Més informació sobre la creació de entors virtuals de Python a:  https://docs.python.org/es/3/library/venv.html
 
