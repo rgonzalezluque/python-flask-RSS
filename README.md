@@ -27,5 +27,6 @@ flask run --debug
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/25fa7473-6489-49f6-8987-77ebbe5127ef)
 
 Més informació sobre la creació de entors virtuals de Python a:  https://docs.python.org/es/3/library/venv.html
+Més informació sobre Flask a: https://flask.palletsprojects.com/en/3.0.x/
 
 ## Com connectar el meu projecte al meu repositori de GitHub?
