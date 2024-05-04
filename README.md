@@ -30,4 +30,37 @@ flask run --debug
 
 * Més informació sobre Flask a: https://flask.palletsprojects.com/en/3.0.x/
 
-## Com connectar el meu projecte al meu repositori de GitHub?
+## Com connectar el meu projecte al repositori de GitHub?
+1. Primer, creem un repositori local de GitHub amb la següent comanda:
+```
+git init
+```
+2. Hem d'afegir tots els fitxers del repositori local al "staging area" i fer un commit:
+```
+git add <fitxer>
+```
+```
+git commit -m "Fase incial de projecte Flask-RSS"
+```
+3. Amb git config ens identifiquem amb el nostre mail i nom d'usuari de GitHub:
+```
+git config --global user.email rgonzalezl@insjoaquimmir.cat
+```
+```
+git config --global user.name "rgonzalezluque"
+```
+4. Després, vinculem el repositori local amb el repositori virtual que hem de creat a GitHub:
+```
+git remote add origin https://github.com/rgonzalezluque/python-flask-RSS.git
+```
+5. Renombrem la rama principal a "main" amb la següent comanda:
+```
+git branch -M main
+```
+6. Finalment, enviem els canvis del nostre repositori local a la branca "main" del nostre repositori virtual de GitHub:
+```
+git push -u origin main
+```
+Més informació sobre la creació de repositoris a GitHub a: https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
+
+## Com fer servir un xml en mode local i en mode remot?
