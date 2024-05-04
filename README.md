@@ -61,3 +61,6 @@ git branch -M main
 ```
 git push -u origin main
 ```
+Més informació sobre la creació de repositoris a GitHub a: https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
+
+## Com fer servir un xml en mode local i en mode remot?
