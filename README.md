@@ -35,7 +35,7 @@ flask run --debug
 ```
 git init
 ```
-2. Hem d'afegir tots els fitxers del repositori local al "staging area" i fer un commit:
+2. Hem d'afegir tots els fitxers al "staging area" i fer un commit per confirmar els canvis i afegir-los al repositori local:
 ```
 git add <fitxer>
 ```
