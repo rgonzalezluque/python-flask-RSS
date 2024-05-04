@@ -8,12 +8,19 @@
 </head>
 <body>
     <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+    <p><img src="{{rss.feed.image.url}}"></p>
+    <p><a href="{{rss.feed.image.link}}">{{rss.feed.image.link}}</a></p>
     {% for item in rss.entries %}
         <p>
             <a href="{{item.link}}">{{item.title}}</a>
             {% for media in item.media_content %}
                 <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
             {% endfor %}
+            <p>Descripció: {{item.description}}</p>
+            <p>Data de publicació: {{item.published}}</p>
+            <p>Data de modificació: {{item.updated}}</p>
+            <p>Autor: {{item.author}}</p>
+            <p>Categoria: {{item.category}}</p>
         </p>
     {% endfor %}
 </body>
