@@ -81,7 +81,7 @@ Abans de fer res he modificat el template "index.html" per a que detecti totes l
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c354dc77-1560-4df1-acdb-2995fd602244)
 
 ## Accés als diferents items i al channel dels RSSs
-Per accedir a tots els diferents items dels RSSs de la Vanguardia he utilitzat jinja a la template "lavanguardia.html".
+Per accedir a tots els diferents items dels RSSs de la Vanguardia he utilitzat "Jinja" a la template "lavanguardia.html".
 ### Accés al titol de la secció
 He obtingut el titol de la secció desde el channel del RSS amb el següent codi:
 ```html
