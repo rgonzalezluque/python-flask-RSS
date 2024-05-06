@@ -84,7 +84,7 @@ Abans de fer res he modificat el template "index.html" per a que detecti totes l
 Per accedir a tots els diferents items dels RSSs de la Vanguardia he utilitzat jinja a la template "lavanguardia.html".
 ### Accés al titol de la secció
 He obtingut el titol de la secció desde el channel del RSS amb el següent codi:
-```py
+```html
 <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
 ```
 La variable {{rss.feed.title}} és la que em dona el titol de la secció del diari. Aquest codi es pot replicar en altres elements del "channel" del RSS.
@@ -99,7 +99,7 @@ Els elements són els següents:
 * item.updated: data de modificació de la notícia
 * item.autor: autor de la notícia
 * item.category: categoria de la notícia
-```py
+```html
 {% for item in rss.entries %}
     <p>
         <a href="{{item.link}}">{{item.title}}</a>
