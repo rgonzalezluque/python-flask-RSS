@@ -68,12 +68,18 @@ Abans de fer res he modificat el template "index.html" per a que detecti totes l
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c68edff7-d3a0-4906-99ce-388bfe8528f6)
 ### Mode local
 1. Descarrego nous RSSs de la Vanguardia i els he desat a la subcarpeta "lavanguardia" dins de la carpeta "rss":
+
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/b985ecde-619b-45ce-92a0-3f1d8e9f88fd)
+
 2. Funció al "app.py" que detecta els RSSs en local:
+
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/965b00ff-72db-4407-863b-e0fcbe6a01f0)
+
 ### Mode remot
 1. Funció al "app.py" que detecta els RSSs de la web de la Vanguardia:
+
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c354dc77-1560-4df1-acdb-2995fd602244)
+
 ## Accés als diferents items i al channel dels RSSs
 Per accedir a tots els diferents items dels RSSs de la Vanguardia he utilitzat jinja a la template "lavanguardia.html".
 ### Accés al titol de la secció
