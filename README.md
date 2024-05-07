@@ -65,7 +65,9 @@ Més informació sobre la creació de repositoris a GitHub a: https://docs.githu
 
 ## Com fer servir un xml en mode local i en mode remot?
 Abans de fer res he modificat el template "index.html" per a que detecti totes les diferents seccions que vull mostrar a la meva pàgina web:
+
 ![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c68edff7-d3a0-4906-99ce-388bfe8528f6)
+
 ### Mode local
 1. Descarrego nous RSSs de la Vanguardia i els he desat a la subcarpeta "lavanguardia" dins de la carpeta "rss":
 
