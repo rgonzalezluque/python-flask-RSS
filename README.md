@@ -116,10 +116,3 @@ Els elements són els següents:
     </p>
 {% endfor %}
 ```
-
-- En mode local fem servir aquesta funció:
-```python
-def get_rss_puntavui(seccio):
-    # MODE REMOT: versió on descarrega l'XML de la web
-    xml = f"http://www.elpuntavui.cat/{seccio}.feed?type=rss"
-```
