@@ -64,3 +64,10 @@ git push -u origin main
 Més informació sobre la creació de repositoris a GitHub a: https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
 
 ## Com fer servir un xml en mode local i en mode remot?
+
+- En mode local fem servir aquesta funció:
+```python
+def get_rss_puntavui(seccio):
+    # MODE REMOT: versió on descarrega l'XML de la web
+    xml = f"http://www.elpuntavui.cat/{seccio}.feed?type=rss"
+```

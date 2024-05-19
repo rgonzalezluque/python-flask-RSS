@@ -1,8 +1,62 @@
+html,body {
+    background-color: white;
+    height: 100%;
+}
+
 body {
-    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 img {
-    width: 400px;
+    width: 80%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.image-item:hover {
+    background-color: whitesmoke;
+}
+
+.image-carousel {
+    width: 100%;
+    height: 200px;
+}
+
+.navbar-nav .nav-link img {
+    height: 25px;
+}
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+
+.image-footer {
+    height: 50px;
 }

@@ -74,6 +74,8 @@ def insert():
         flash(f"El producte {producte} amb quantitat {quantitat} s'ha inserit correctament")
         return redirect(url_for('insert'))
 
+# Proyecto Flask-RSS
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -85,10 +87,23 @@ def lavanguardia(seccio):
 
 def get_rss_lavanguardia(seccio):
     # MODE REMOT: versió on descarrega l'XML de la web
-    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+     
+    # MODE LOCAL
+    # xml = /rss/lavanguardia/{seccio}.xml
+    rss = feedparser.parse(xml)
+    return rss
+
+@app.route('/puntavui/<seccio>')
+def puntavui(seccio):
+    rss = get_rss_puntavui(seccio)
+    return render_template("puntavui.html", rss = rss, seccio=seccio)
+
+def get_rss_puntavui(seccio):
+    # MODE REMOT: versió on descarrega l'XML de la web
+    xml = f"http://www.elpuntavui.cat/{seccio}.feed?type=rss"
     
-    # MODE LOCAL: versió que fa servir l'XML descarregat
-    xml = f"./rss/lavanguardia/{seccio}.xml"
-    
+    # MODE LOCAL
+    # xml = /rss/puntavui/{seccio}.xml
     rss = feedparser.parse(xml)
     return rss
