@@ -35,7 +35,7 @@ flask run --debug
 ```
 git init
 ```
-2. Hem d'afegir tots els fitxers del repositori local al "staging area" i fer un commit:
+2. Hem d'afegir tots els fitxers al "staging area" i fer un commit per confirmar els canvis i afegir-los al repositori local:
 ```
 git add <fitxer>
 ```
@@ -64,6 +64,58 @@ git push -u origin main
 Més informació sobre la creació de repositoris a GitHub a: https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
 
 ## Com fer servir un xml en mode local i en mode remot?
+Abans de fer res he modificat el template "index.html" per a que detecti totes les diferents seccions que vull mostrar a la meva pàgina web:
+
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c68edff7-d3a0-4906-99ce-388bfe8528f6)
+
+### Mode local
+1. Descarrego nous RSSs de la Vanguardia i els he desat a la subcarpeta "lavanguardia" dins de la carpeta "rss":
+
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/b985ecde-619b-45ce-92a0-3f1d8e9f88fd)
+
+2. Funció al "app.py" que detecta els RSSs en local:
+
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/965b00ff-72db-4407-863b-e0fcbe6a01f0)
+
+### Mode remot
+1. Funció al "app.py" que detecta els RSSs de la web de la Vanguardia:
+
+![image](https://github.com/rgonzalezluque/python-flask-RSS/assets/165800646/c354dc77-1560-4df1-acdb-2995fd602244)
+
+## Accés als diferents items i al channel dels RSSs
+Per accedir a tots els diferents items dels RSSs de la Vanguardia he utilitzat "Jinja" a la template "lavanguardia.html".
+### Accés al titol de la secció
+He obtingut el titol de la secció desde el channel del RSS amb el següent codi:
+```html
+<h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+```
+La variable {{rss.feed.title}} és la que em dona el titol de la secció del diari. Aquest codi es pot replicar en altres elements del "channel" del RSS.
+### Accés als items del RSS
+En el següent codi hi ha un for que itera tots els items del RSS i cerca els elements que es demanen.
+Els elements són els següents:
+* item.link: url que ens direcciona a la noticia.
+* item.title: títol de la notícia
+* media.url: imatge de la notícia
+* item.description: descripció de la notícia
+* item.published: data de publicació de la notícia
+* item.updated: data de modificació de la notícia
+* item.autor: autor de la notícia
+* item.category: categoria de la notícia
+```html
+{% for item in rss.entries %}
+    <p>
+        <a href="{{item.link}}">{{item.title}}</a>
+        {% for media in item.media_content %}
+            <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+        {% endfor %}
+        <p>Descripció: {{item.description}}</p>
+        <p>Data de publicació: {{item.published}}</p>
+        <p>Data de modificació: {{item.updated}}</p>
+        <p>Autor: {{item.author}}</p>
+        <p>Categoria: {{item.category}}</p>
+    </p>
+{% endfor %}
+```
 
 - En mode local fem servir aquesta funció:
 ```python
